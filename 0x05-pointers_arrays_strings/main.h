@@ -7,5 +7,6 @@
 int _putchar(char c);
 void _puts(char *str);
 int _atoi(char *s);
+void puts2(char *str);
 
 #endif /* MAIN_H */
