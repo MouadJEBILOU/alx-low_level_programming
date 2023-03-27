@@ -5,7 +5,7 @@
  * @str: Pointeur vers la chaîne de caractères à imprimer.
  *
  * Description: Cette fonction prend en paramètre un pointeur vers une chaîne
- * de caractères et l'imprime sur la sortie standard, suivi d'un saut de ligne.
+ * de caractères et l'imprime sur la sortie standard, suivi d'un saut de ligne
  *
  * Return: Aucun.
  */
