@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define PASSWORD_LENGTH 9
+
 /**
  * main - Entry point.
  * Description: Generates random valid
@@ -10,20 +12,20 @@
  */
 int main(void)
 {
+    char password[PASSWORD_LENGTH + 1];
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const int charset_size = sizeof(charset) - 1;
     int i;
-    int random_value;
-    int password_length = 10;
-    unsigned int seed = time(NULL);
 
-    srand(seed);
+    srand(time(NULL));
 
-    for (i = 0; i < password_length; i++)
-    {
-        random_value = (rand() % 94) + 33; 
-        printf("%c", random_value);
+    for (i = 0; i < PASSWORD_LENGTH; i++) {
+        password[i] = charset[rand() % charset_size];
     }
 
-    printf("\n");
+    password[PASSWORD_LENGTH] = '\0';
 
-    return (0);
+    printf("%s\n", password);
+
+    return 0;
 }
