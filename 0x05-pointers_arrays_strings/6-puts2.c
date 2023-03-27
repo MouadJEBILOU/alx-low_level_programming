@@ -25,3 +25,12 @@ void puts2(char *str)
 
 	_putchar('\n');
 }
+
+int main(void)
+{
+    char *str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium augue non elit egestas, vitae tempus metus mollis. Nulla facilisi. Ut malesuada libero sed dictum eleifend. Cras ac odio id quam tincidunt commodo. Duis venenatis eleifend urna, nec vulputate velit laoreet in. Mauris ultricies urna eu auctor tincidunt. Etiam vitae egestas urna, ut fermentum libero.";
+
+    puts2(str);
+
+    return 0;
+}
