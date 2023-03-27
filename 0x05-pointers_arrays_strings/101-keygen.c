@@ -12,14 +12,14 @@ int main(void)
 {
     int i;
     int random_value;
-    int password_length = 10; // You can change the password length as needed.
+    int password_length = 10;
     unsigned int seed = time(NULL);
 
     srand(seed);
 
     for (i = 0; i < password_length; i++)
     {
-        random_value = (rand() % 94) + 33; // Generate a random value between 33 and 126 (inclusive).
+        random_value = (rand() % 94) + 33; 
         printf("%c", random_value);
     }
 
