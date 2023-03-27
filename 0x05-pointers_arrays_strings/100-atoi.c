@@ -19,6 +19,14 @@ int _atoi(char *s)
             sign *= -1;
         else if (*s >= '0' && *s <= '9')
         {
+            if (result > (INT_MAX - (*s - '0')) / 10)
+            {
+                if (sign > 0)
+                    return INT_MAX;
+                else
+                    return INT_MIN;
+            }
+
             result = result * 10 + (*s - '0');
             started_parsing = 1;
         }
