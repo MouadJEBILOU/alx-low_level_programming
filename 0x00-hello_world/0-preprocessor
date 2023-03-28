@@ -1,16 +1,2 @@
 #!/bin/sh
-
-# Vérifie si la variable $CFILE est définie
-if [ -z "$CFILE" ]; then
-    echo "La variable CFILE n'est pas définie."
-    exit 1
-fi
-
-# Vérifie si le fichier $CFILE existe
-if [ ! -f "$CFILE" ]; then
-    echo "Le fichier '$CFILE' n'existe pas."
-    exit 1
-fi
-
-# Exécute le fichier C à travers le préprocesseur et enregistre le résultat dans le fichier 'c'
-gcc -E "$CFILE" -o c
+[ -z "$CFILE" ] || [ ! -f "$CFILE" ] && echo "CFILE is not defined or the file does not exist" || gcc -E "$CFILE" -o c
