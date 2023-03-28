@@ -66,3 +66,16 @@ TASK 7 : Write a script that generates the assembly code (Intel syntax) of a C c
 gcc -S -masm=intel "$CFILE" -o "${CFILE%.c}.s"
 
 TASK 8 : Write a C program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error :
+#include <unistd.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 1 (Error)
+ */
+int main(void)
+{
+	write(STDERR_FILENO,
+	      "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
+}
