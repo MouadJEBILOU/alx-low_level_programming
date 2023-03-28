@@ -14,4 +14,19 @@ TASK 3 : Write a script that compiles a C file and creates an executable named c
 #!/bin/bash
 [ -z "$CFILE" ] || [ ! -f "$CFILE" ] && echo "CFILE is not defined or the file does not exist" || gcc "$CFILE" -o cisfun
 
-TASK 4 : 
+TASK 4 : Write a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line :
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
+}
+
+
+TASK 5 : Write a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line : 
