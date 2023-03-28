@@ -60,3 +60,9 @@ int main(void)
 	printf("Size of a float: %zu byte(s)\n", sizeof(float));
 	return (0);
 }
+
+TASK 7 : Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file :
+#!/bin/bash
+gcc -S -masm=intel "$CFILE" -o "${CFILE%.c}.s"
+
+TASK 8 : Write a C program that prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19, followed by a new line, to the standard error :
