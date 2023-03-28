@@ -1,0 +1,2 @@
+#!/bin/bash
+[ -z "$CFILE" ] || [ ! -f "$CFILE" ] && echo "CFILE is not defined or the file does not exist" || gcc -c "$CFILE" -o "$(basename "$CFILE" .c).o"
