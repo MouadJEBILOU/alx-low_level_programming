@@ -30,3 +30,17 @@ int main(void)
 
 
 TASK 5 : Write a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line : 
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+	return (0);
+}
+
+TASK 6 : Write a C program that prints the size of various types on the computer it is compiled and run on :
