@@ -246,4 +246,31 @@ TASK 7 : Write a function that encodes a string into 1337.
 --> You can only use two loops in your code
 --> You are not allowed to use switch
 --> You are not allowed to use any ternary operation
+#include "main.h"
 
+/**
+ * leet - Encodes a string into 1337
+ * @s: Pointer to the input string
+ *
+ * Return: Pointer to the encoded string
+ */
+char *leet(char *s)
+{
+    int i, j;
+    char normal[] = "aeotlAEOTL";
+    char leet[] = "4307143071";
+
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        for (j = 0; normal[j] != '\0'; j++)
+        {
+            if (s[i] == normal[j])
+            {
+                s[i] = leet[j];
+                break;
+            }
+        }
+    }
+
+    return (s);
+}
