@@ -134,3 +134,50 @@ int _strcmp(char *s1, char *s2)
 
     return (s1[i] - s2[i]);
 }
+
+TASK 4 : Write a function that reverses the content of an array of integers.
+--> Prototype: void reverse_array(int *a, int n);
+--> Where n is the number of elements of the array
+#include "main.h"
+
+/**
+ * reverse_array - Reverses the content of an array of integers
+ * @a: Pointer to the array of integers
+ * @n: Number of elements in the array
+ */
+void reverse_array(int *a, int n)
+{
+    int i, temp;
+
+    for (i = 0; i < n / 2; i++)
+    {
+        temp = a[i];
+        a[i] = a[n - 1 - i];
+        a[n - 1 - i] = temp;
+    }
+}
+
+TASK 5 : Write a function that changes all lowercase letters of a string to uppercase.
+--> Prototype: char *string_toupper(char *);
+#include "main.h"
+
+/**
+ * string_toupper - Changes all lowercase letters of a string to uppercase
+ * @s: Pointer to the input string
+ *
+ * Return: Pointer to the modified string
+ */
+char *string_toupper(char *s)
+{
+    int i;
+
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        if (s[i] >= 'a' && s[i] <= 'z')
+        {
+            s[i] = s[i] - ('a' - 'A');
+        }
+    }
+
+    return s;
+}
