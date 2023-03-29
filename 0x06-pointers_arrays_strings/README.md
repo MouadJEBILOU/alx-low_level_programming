@@ -40,3 +40,69 @@ TASK 1 : Write a function that concatenates two string :
 it will use at most n bytes from src; and
 src does not need to be null-terminated if it contains n or more bytes
 --> Return a pointer to the resulting string dest
+#include "main.h"
+
+/**
+ * _strncat - Concatenates two strings, using at most n bytes from src
+ * @dest: Destination string
+ * @src: Source string
+ * @n: Maximum number of bytes to use from src
+ *
+ * Return: Pointer to the resulting string dest
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+    int dest_len = 0;
+    int i;
+
+    // Find the length of the destination string
+    while (dest[dest_len] != '\0')
+    {
+        dest_len++;
+    }
+
+    // Append the source string to the destination string, using at most n bytes
+    for (i = 0; i < n && src[i] != '\0'; i++)
+    {
+        dest[dest_len + i] = src[i];
+    }
+
+    // Add the terminating null byte
+    dest[dest_len + i] = '\0';
+
+    return dest;
+}
+
+TASK 2 : Write a function that copies a string.
+--> Prototype: char *_strncpy(char *dest, char *src, int n);
+--> Your function should work exactly like strncpy
+#include "main.h"
+
+/**
+ * _strncpy - Copies a string, using at most n bytes from src
+ * @dest: Destination string
+ * @src: Source string
+ * @n: Maximum number of bytes to use from src
+ *
+ * Return: Pointer to the destination string dest
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+    int i;
+
+    /* Copy the source string to the destination string, using at most n bytes */
+    for (i = 0; i < n && src[i] != '\0'; i++)
+    {
+        dest[i] = src[i];
+    }
+
+    /* If the source string is shorter than n bytes, fill the remaining bytes with null characters */
+    for (; i < n; i++)
+    {
+        dest[i] = '\0';
+    }
+
+    return dest;
+}
+
+TASK 3 : 
