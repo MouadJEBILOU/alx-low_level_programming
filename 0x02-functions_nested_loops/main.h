@@ -15,5 +15,7 @@ void times_table(void);
 int add(int a, int b);
 void print_to_98(int n);
 void print_times_table(int n);
+void print_number(int n);
+int sum_multiples(int limit);
 
 #endif /* MAIN_H */
