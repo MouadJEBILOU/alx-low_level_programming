@@ -1,27 +1,24 @@
 #include <stdio.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
 int main(void)
 {
-    int prev1 = 1, prev2 = 2, next, count = 2; /* On commence avec 1 et 2 */
-    printf("%d, %d, ", prev1, prev2);
+    int i, count = 2;
+    unsigned int first = 1, second = 2, third;
 
-    while (count < 98)
-    { /* On veut les 98 premiers nombres de Fibonacci */
-        next = prev1 + prev2;
-        prev1 = prev2;
-        prev2 = next;
+    printf("%u, %u", first, second);
+    for (i = 3; i <= 98; i++) {
+        third = first + second;
+        printf(", %u", third);
+        first = second;
+        second = third;
         count++;
-        printf("%d", next);
-        if (count < 98)
-        {
-            printf(", "); /* On met une virgule sauf pour le dernier nombre */
+
+        if (count == 10 && i != 98) {
+            printf(",\n");
+            count = 0;
         }
     }
     printf("\n");
+
     return 0;
 }
