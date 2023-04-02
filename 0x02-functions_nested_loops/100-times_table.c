@@ -1,24 +1,50 @@
-#include <stdio.h>
+#include "main.h"
 
-void generate_table(int rows, int cols) {
-    for (int i = 0; i <= rows; i++) {
-        for (int j = 0; j <= cols; j++) {
-            int num = i * j;
-            if (j != cols) {
-                printf("%4d,", num);
-            } else {
-                printf("%4d", num);
-            }
-        }
-        printf("\n");
-    }
-}
+/**
+ * print_times_table - prints the n times table, starting with 0
+ * @n: integer to print the times table of
+ *
+ * Return: void
+ */
+void print_times_table(int n)
+{
+	int i, j, res;
 
-int main() {
-    int rows = 13;
-    int cols = 13;
+	if (n < 0 || n > 15)
+		return;
 
-    generate_table(rows, cols);
-
-    return 0;
+	for (i = 0; i <= n; i++)
+	{
+		for (j = 0; j <= n; j++)
+		{
+			res = i * j;
+			if (j == 0)
+				_putchar('0');
+			else if (res < 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(res + '0');
+			}
+			else if (res < 100)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(res / 10 + '0');
+				_putchar(res % 10 + '0');
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(res / 100 + '0');
+				_putchar(res % 100 / 10 + '0');
+				_putchar(res % 10 + '0');
+			}
+		}
+		_putchar('\n');
+	}
 }
