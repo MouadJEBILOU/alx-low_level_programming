@@ -7,19 +7,21 @@
  */
 int main(void)
 {
-    unsigned int i, a = 1, b = 2, c;
+    int prev1 = 1, prev2 = 2, next, count = 2; /* On commence avec 1 et 2 */
+    printf("%d, %d, ", prev1, prev2);
 
-    printf("%u, %u", a, b);
-
-    for (i = 0; i < 96; i++)
-    {
-        c = a + b;
-        printf(", %u", c);
-        a = b;
-        b = c;
+    while (count < 98)
+    { /* On veut les 98 premiers nombres de Fibonacci */
+        next = prev1 + prev2;
+        prev1 = prev2;
+        prev2 = next;
+        count++;
+        printf("%d", next);
+        if (count < 98)
+        {
+            printf(", "); /* On met une virgule sauf pour le dernier nombre */
+        }
     }
-
     printf("\n");
-
     return 0;
 }
