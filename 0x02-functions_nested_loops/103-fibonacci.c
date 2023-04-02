@@ -7,22 +7,20 @@
  */
 int main(void)
 {
-    int num1 = 1, num2 = 2, next = 0;
-    int sum = 2;
+	long int sum = 0, first = 1, second = 2, next;
 
-    while (next < 4000000)
-    {
-        next = num1 + num2;
-        num1 = num2;
-        num2 = next;
+	while (second < 4000000)
+	{
+		next = first + second;
+		first = second;
+		second = next;
+		if (second % 2 == 0)
+		{
+			sum += second;
+		}
+	}
 
-        if (next % 2 == 0)
-        {
-            sum += next;
-        }
-    }
+	printf("%ld\n", sum);
 
-    printf("%d\n", sum);
-
-    return 0;
+	return (0);
 }
