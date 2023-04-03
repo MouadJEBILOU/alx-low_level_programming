@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#ifndef NULL
+#define NULL ((void *)0)
+#endif
+
 /* Function prototypes */
 
 int _putchar(char c);
