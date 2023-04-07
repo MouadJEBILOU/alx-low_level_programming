@@ -3,10 +3,12 @@
 int sqrt_helper(int n, int i);
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
+ * _sqrt_recursion - returns the natural
+ * square root of a number
  * @n: number to calculate the square root of
  *
- * Return: natural square root of the number, -1 if n does not have a
+ * Return: natural square root of the number,
+ * -1 if n does not have a
  * natural square root
  */
 int _sqrt_recursion(int n)
@@ -16,7 +18,7 @@ int _sqrt_recursion(int n)
 		return (-1);
 	}
 
-	return sqrt_helper(n, 1);
+	return (sqrt_helper(n, 1));
 }
 
 /**
@@ -24,7 +26,8 @@ int _sqrt_recursion(int n)
  * @n: number to calculate the square root of
  * @i: iterator
  *
- * Return: natural square root of the number, -1 if n does not have a
+ * Return: natural square root of the number,
+ * -1 if n does not have a
  * natural square root
  */
 int sqrt_helper(int n, int i)
@@ -38,5 +41,5 @@ int sqrt_helper(int n, int i)
 		return (i);
 	}
 
-	return sqrt_helper(n, i + 1);
+	return (sqrt_helper(n, i + 1));
 }
