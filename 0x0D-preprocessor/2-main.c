@@ -1,8 +1,6 @@
 #include <stdio.h>
 /**
- *
  *File: 0-main.c
- *
 */
 
 int main(void)
