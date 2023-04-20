@@ -1,14 +1,9 @@
-#include "function_pointers.h"
+#ifndef FUNCTION_POINTERS_H
+#define FUNCTION_POINTERS_H
 
-/**
- * print_name - prints a name using a given printing function
- * @name: name to print
- * @f: function pointer to a printing function
- *
- * Return: void
- */
-void print_name(char *name, void (*f)(char *))
-{
-    if (name != NULL && f != NULL)
-        f(name);
-}
+void print_name(char *name, void (*f)(char *));
+void print_name_as_is(char *name);
+void print_name_uppercase(char *name);
+int _putchar(char c);
+
+#endif /* FUNCTION_POINTERS_H */
