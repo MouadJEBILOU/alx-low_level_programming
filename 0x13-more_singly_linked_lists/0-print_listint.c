@@ -1,9 +1,8 @@
-
 #include "lists.h"
 #include <stdio.h>
 
 /**
- * 
+ *
  * Return: the number of nodes
  *
  */
